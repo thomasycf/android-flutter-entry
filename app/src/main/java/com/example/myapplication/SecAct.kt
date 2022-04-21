@@ -17,7 +17,7 @@ class SecAct: AppCompatActivity(), LifecycleOwner {
 
     override fun onBackPressed() {
         //  this.onBackPressedDispatcher
-        print("android capture back button pressed")
+        print("SecAct - android capture back button pressed")
         //   super.onBackPressed()
     }
 }

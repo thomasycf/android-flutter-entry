@@ -66,7 +66,7 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
 
     override fun onBackPressed() {
       //  this.onBackPressedDispatcher
-        print("android capture back button pressed")
+        print("MainAct1 - android capture back button pressed")
      //   super.onBackPressed()
     }
 

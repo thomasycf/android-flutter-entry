@@ -20,23 +20,23 @@ class SingleFlutterActivity : FlutterActivity(), EngineBindingsDelegate {
         engineBindings.attach()
     }
     override fun onKeyUp(keyCode: Int, event: KeyEvent?): Boolean {
-        println("android capture onKeyUp")
+        println("SingleFlutterActivity - android capture onKeyUp")
         return super.onKeyUp(keyCode, event)
     }
 
     override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
-        println("android capture onKeyDown")
+        println("SingleFlutterActivity - android capture onKeyDown")
         return super.onKeyDown(keyCode, event)
     }
 
     override fun onBackPressed() {
-        println("android capture back button pressed")
-        super.onBackPressed()
+        println("SingleFlutterActivity - android capture back button pressed")
+       // super.onBackPressed() // comment this to disable back action
     }
 
     override fun onDestroy() {
         super.onDestroy()
-        println("android capture back button onDestroy")
+        println("SingleFlutterActivity - android capture back button onDestroy")
         engineBindings.detach()
     }
 
@@ -47,7 +47,7 @@ class SingleFlutterActivity : FlutterActivity(), EngineBindingsDelegate {
     }
 
     override fun onNext() {
-        print("android capture back button onNext")
+        print("SingleFlutterActivity - android capture back button onNext")
         val flutterIntent = Intent(this, MainActivity::class.java)
         startActivity(flutterIntent)
     }  
